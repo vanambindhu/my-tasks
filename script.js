@@ -5,6 +5,7 @@ const input = document.getElementById("task-input");
 const taskList = document.getElementById("task-list");
 const remainingCount = document.getElementById("remaining-count");
 const completedCount = document.getElementById("completed-count");
+const totalCount = document.getElementById("total-count");
 const filterButtons = document.querySelectorAll(".filter");
 
 let tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
