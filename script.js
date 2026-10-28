@@ -90,3 +90,8 @@ filterButtons.forEach(button => {
 });
 
 renderTasks();
+clearCompletedButton.addEventListener("click", () => {
+    tasks = tasks.filter(task => !task.completed);
+    saveTasks();
+    renderTasks();
+});
