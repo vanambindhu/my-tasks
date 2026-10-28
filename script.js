@@ -16,9 +16,9 @@ function saveTasks() {
 }
 
 function updateCounts() {
-    const completed = tasks.filter(task => task.completed).length;
-    remainingCount.textContent = `${tasks.length - completed} remaining`;
-    completedCount.textContent = `${completed} completed`;
+    totalCount.textContent = tasks.length + " total tasks";
+remainingCount.textContent = (tasks.length - tasks.filter(task => task.completed).length) + " remaining";
+completedCount.textContent = tasks.filter(task => task.completed).length + " completed";
 }
 
 function renderTasks() {
