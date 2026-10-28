@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +11,27 @@
 <body>
     <div class="container">
         <h1>My Tasks</h1>
-        <form id="task-form">
+        <p>One step at a time ✨</p>
+
+        <form class="task-form" id="task-form">
             <input type="text" id="task-input" placeholder="Enter a task..." required>
             <button type="submit">Add Task</button>
         </form>
-        <ul id="task-list"></ul>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="active" type="button">Active</button>
+            <button class="filter" data-filter="completed" type="button">Completed</button>
+        </div>
+
+        <div class="stats">
+            <span id="remaining-count">0 remaining</span>
+            <span id="completed-count">0 completed</span>
+        </div>
+
+        <ul class="task-list" id="task-list"></ul>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
